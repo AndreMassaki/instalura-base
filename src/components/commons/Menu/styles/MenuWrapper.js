@@ -75,6 +75,7 @@ MenuWrapper.CentralSide = styled.div`
     `,
   })}
   a {
+    cursor: pointer;
     text-align: center;
     display: block;
     text-decoration: none;
