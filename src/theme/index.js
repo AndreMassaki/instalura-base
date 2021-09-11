@@ -1,4 +1,4 @@
-import { typographyVariants } from "./typographyVariants";
+import typographyVariants from './typographyVariants';
 
 const colors = {
   background: {
@@ -45,13 +45,13 @@ export default {
   colors,
   typographyVariants,
   breakpoints: {
-    xs: 0, // extra small
-    sm: 480, // small
-    md: 768, // medium
-    lg: 992, // large
-    xg: 1200, // extra large
+    xs: 0,
+    sm: 480,
+    md: 768,
+    lg: 992,
+    xg: 1200,
   },
   borderRadius: '8px',
   fontFamily: '\'Rubik\', sans-serif',
   transition: '200ms ease-in-out',
-}
+};
