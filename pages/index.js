@@ -27,7 +27,7 @@ export default function Home() {
           setModalState(false);
         }}
       >
-        {(propsDoModal) => {
+        {(propsDoModal) => (
           <Box
             backgroundColor="white"
             {...propsDoModal}
@@ -35,8 +35,8 @@ export default function Home() {
             <div>
               Nosso conteúdo pro modal
             </div>
-          </Box>;
-        }}
+          </Box>
+        )}
       </Modal>
 
       <Menu />
