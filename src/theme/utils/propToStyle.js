@@ -1,8 +1,6 @@
-/* eslint-disable consistent-return */
 import { breakpointsMedia } from './breakpointsMedia';
 
 function propToStyle(propName) {
-  // eslint-disable-next-line func-names
   return function (props) {
     const propValue = props[propName];
 
@@ -33,4 +31,5 @@ function propToStyle(propName) {
     }
   };
 }
+
 export default propToStyle;

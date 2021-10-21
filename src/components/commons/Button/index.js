@@ -1,4 +1,3 @@
-/* eslint-disable func-names */
 import styled, { css } from 'styled-components';
 import get from 'lodash/get';
 import { TextStyleVariantsMap } from '../../foundation/Text';
@@ -12,12 +11,8 @@ const ButtonGhost = css`
 
 const ButtonDefault = css`
   color: white;
-  background-color: ${function (props) {
-    return get(props.theme, `colors.${props.variant}.color`);
-  }};
-  color: ${function (props) {
-    return get(props.theme, `colors.${props.variant}.contrastText`);
-  }};
+  background-color: ${({ props }) => get(props.theme, `colors.${props.variant}.color`)};
+  color: ${({ props }) => get(props.theme, `colors.${props.variant}.contrastText`)};
 `;
 
 const Button = styled.button`
@@ -30,12 +25,8 @@ const Button = styled.button`
 
 ${TextStyleVariantsMap.smallestException}
 
-  ${function (props) {
-    if (props.ghost) {
-      return ButtonGhost;
-    }
-    return ButtonDefault;
-  }}
+  ${(props) => ((props.ghost) ? ButtonGhost : ButtonDefault)};
+
   transition: opacity ${({ theme }) => theme.transition};
   border-radius: ${({ theme }) => theme.borderRadius};
   &:hover,
@@ -51,6 +42,16 @@ ${TextStyleVariantsMap.smallestException}
       ${TextStyleVariantsMap.paragraph1}
     `,
   })}
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .2;
+  }
+
+  ${({ fullWidth }) => fullWidth && css`
+    width: 100%;
+  `}
+
   ${propToStyle('margin')}
   ${propToStyle('display')}
 `;
