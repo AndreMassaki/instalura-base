@@ -24,5 +24,6 @@ module.exports = {
     'react/jsx-no-bind': 'off',
     'func-names': 'off',
     'consistent-return': 'off',
+    'react/function-component-definition': 'off',
   },
 };
