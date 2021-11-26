@@ -6,20 +6,18 @@ on:
 
 jobs:
   lint:
-    name: Lint
     runs-on: ubuntu-latest
-
-  steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-  with:
-    node-version: '14'
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
   ##################################
   ##################################
 
-  - name: Node Version
-    run: node -v
-  - name: Install de dependencias
-    run: yarn install
-  - name: Roda o Linter!
-    run: yarn lint
+      - name: Node Version
+        run: node -v
+      - name: Install de dependencias
+        run: yarn install
+      - name: Roda o Linter!
+        run: yarn lint
