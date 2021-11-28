@@ -30,7 +30,7 @@
     "@commitlint/config-conventional": "^15.0.0",
     "babel-plugin-styled-components": "^1.13.3",
     "cz-conventional-changelog": "3.3.0",
-    "eslint": "<8.0.0",
+    "eslint": "<9.0.0",
     "eslint-config-airbnb": "^19.0.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
